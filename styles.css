@@ -271,6 +271,30 @@ p { margin: 0 0 16px; max-width: 65ch; }
 /* Prave slike nemaju padding koji ima placeholder */
 img.hero-media, video.hero-media, img.cat-media, img.footer-card-media { padding: 0; }
 
+/* Dugme za pauzu videa: dole desno, na mobilnom gore desno. Bez JS se ne prikazuje, jer ne bi radilo. */
+.hero-pause {
+  display: none;
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  background: rgba(250, 250, 249, .85);
+  color: var(--accent-text);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.js .hero-pause { display: inline-flex; }
+.hero-pause:hover { background: var(--bg); color: var(--text); }
+.hero-pause .ic-play,
+.hero-pause[data-stanje="zaustavljeno"] .ic-pause { display: none; }
+.hero-pause[data-stanje="zaustavljeno"] .ic-play { display: block; }
+
 /* ---------- Kategorije (kartice sa fotografijom) ---------- */
 .cats-row {
   display: grid;
@@ -461,29 +485,33 @@ img.p-img { background: #fff; }
 .story-bar { flex: 1; height: 3px; border-radius: 2px; background: rgba(255, 255, 255, .4); overflow: hidden; }
 .story-bar i { display: block; height: 100%; width: calc(var(--fill, 0) * 100%); background: #fff; }
 
-/* Kartica koraka preko fotografije */
-.story-card {
+/* Sloj koraka preko fotografije: naslov koraka (samo na mobilnom) i kartica.
+   main.js pali sloj sa klasom is-active. */
+.story-slide {
   position: absolute;
   left: 24px;
   bottom: 24px;
   z-index: 2;
   width: min(360px, calc(100% - 48px));
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity .45s ease, transform .45s ease, visibility 0s linear .45s;
+}
+.story-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity .45s ease .15s, transform .45s ease .15s, visibility 0s;
+}
+.story-slide-title { display: none; }
+.story-card {
   padding: 22px;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius-img);
   font-size: 14px;
   line-height: 1.4;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(16px);
-  transition: opacity .45s ease, transform .45s ease, visibility 0s linear .45s;
-}
-.story-card.is-active {
-  opacity: 1;
-  visibility: visible;
-  transform: none;
-  transition: opacity .45s ease .15s, transform .45s ease .15s, visibility 0s;
 }
 .story-card p { margin: 0; }
 .sc-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
@@ -563,9 +591,9 @@ img.p-img { background: #fff; }
 
 /* Animacije u karticama krenu kad kartica postane aktivna. Krajnje stanje je osnovni stil,
    pa bez animacije (isključen pokret) sve odmah stoji popunjeno. */
-.story-card.is-active .sc-typed { animation: sc-kucanje calc(var(--n) * 55ms) steps(var(--n), end) var(--d) both; }
-.story-card.is-active .sc-btn { animation: sc-klik .5s ease 3.3s both; }
-.story-card.is-active .sc-icon::after {
+.story-slide.is-active .sc-typed { animation: sc-kucanje calc(var(--n) * 55ms) steps(var(--n), end) var(--d) both; }
+.story-slide.is-active .sc-btn { animation: sc-klik .5s ease 3.3s both; }
+.story-slide.is-active .sc-icon::after {
   content: "";
   position: absolute;
   inset: -1px;
@@ -573,11 +601,11 @@ img.p-img { background: #fff; }
   border-radius: 50%;
   animation: sc-zvoni 1.3s ease-out .2s 2 both;
 }
-.story-card.is-active .sc-checks li,
-.story-card.is-active .sc-pay div,
-.story-card.is-active .sc-status { animation: sc-pojava .4s ease var(--d) both; }
-.story-card.is-active .sc-track::after { animation: sc-linija 1.4s ease .3s both; }
-.story-card.is-active .sc-track li::before { animation: sc-tacka .3s ease var(--d) both; }
+.story-slide.is-active .sc-checks li,
+.story-slide.is-active .sc-pay div,
+.story-slide.is-active .sc-status { animation: sc-pojava .4s ease var(--d) both; }
+.story-slide.is-active .sc-track::after { animation: sc-linija 1.4s ease .3s both; }
+.story-slide.is-active .sc-track li::before { animation: sc-tacka .3s ease var(--d) both; }
 
 @keyframes sc-kucanje { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
 @keyframes sc-klik { 40% { background: var(--accent-text); } }
@@ -631,9 +659,21 @@ img.p-img { background: #fff; }
   align-items: start;
   margin-top: 48px;
 }
-.store-info dl { margin: 0 0 24px; border-top: 1px solid var(--line); }
-.store-info dt { font-size: 13px; color: var(--text-2); margin-top: 16px; }
-.store-info dd { margin: 0; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.store-info dl, .stores-overview dl { margin: 0 0 24px; border-top: 1px solid var(--line); }
+.store-info dt, .stores-overview dt { font-size: 13px; color: var(--text-2); margin-top: 16px; }
+.store-info dd, .stores-overview dd { margin: 0; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.store-info { scroll-margin-top: calc(var(--nav-h, 72px) + 24px); }
+
+/* Kratak pregled obe radnje odmah ispod naslova, pre scena */
+.stores-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 72px;
+  margin-top: 48px;
+}
+.store-sum h3 { font-size: 34px; margin: 0 0 12px; }
+.store-sum dl { margin-bottom: 8px; }
+.store-sum .link-caps { display: inline-block; padding: 12px 0; } /* veća površina za prst */
 .store-map {
   width: 100%;
   aspect-ratio: 16 / 10;
@@ -658,7 +698,7 @@ img.p-img { background: #fff; }
 .scenes-on .scene {
   max-width: none;
   padding: 0;
-  height: 260vh;
+  height: 180vh; /* scena stoji dok se skroluje oko 0,9 ekrana (180vh minus pozornica) */
 }
 .scenes-on .scene-stage {
   --stage-h: calc(100vh - var(--nav-h, 72px));
@@ -941,6 +981,7 @@ img.gallery-main { background: #fff; }
   .hero::before { display: none; }
   .hero { position: relative; }
   .hero-media { position: static; display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 72% 50%; }
+  .hero-pause { top: 16px; bottom: auto; right: 16px; }
   .hero-content { padding: 40px var(--pad-x) 16px; }
   .hero h1 { font-size: 48px; }
 
@@ -959,21 +1000,60 @@ img.gallery-main { background: #fff; }
 
   .section-head { flex-direction: column; align-items: flex-start; }
 
-  /* Priča na mobilnom: okvir je gore zalepljen ispod menija, koraci prolaze ispod njega */
+  /* Priča na mobilnom: okvir je gore zalepljen ispod menija, a u njemu su naslov aktivnog koraka i kartica.
+     Ispod okvira je samo objašnjenje aktivnog koraka (main.js bira korak čim mu vrh pređe ispod okvira). */
   .story-head { margin-bottom: 32px; }
   .story { grid-template-columns: 1fr; gap: 24px; }
   .js .story { gap: 0; }
   .js .story-visual { order: -1; top: var(--nav-h, 72px); z-index: 3; padding: 8px 0 12px; background: var(--surface); }
-  .js .story-frame { height: 46vh; }
-  .js .story-step { min-height: 62vh; justify-content: flex-start; padding-top: 28px; }
-  .js .story-steps { padding-bottom: 8vh; }
+  .js .story-frame { height: 58vh; }
+  .js .story-step { min-height: 34vh; justify-content: flex-start; padding-top: 8px; }
+  .js .story-steps { padding-bottom: 12vh; }
+  /* Objašnjenje koraka stoji zalepljeno odmah ispod okvira dok se skroluje kroz taj korak */
+  .js .story-step p { position: sticky; top: calc(var(--nav-h, 72px) + 58vh + 32px); }
   @supports (height: 100svh) {
-    .js .story-frame { height: 46svh; }
-    .js .story-step { min-height: 62svh; }
+    .js .story-frame { height: 58svh; }
+    .js .story-step { min-height: 34svh; }
+    .js .story-step p { top: calc(var(--nav-h, 72px) + 58svh + 32px); }
+  }
+  /* Naslov koraka je u okviru, pa ga u listi skrivamo samo vizuelno (čitač ekrana ga i dalje čita) */
+  .js .story-step .story-num,
+  .js .story-step h3 {
+    position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
   }
   .story-step h3 { font-size: 30px; }
   .story-step p { font-size: 16px; }
-  .story-card { left: 12px; right: 12px; bottom: 12px; width: auto; padding: 16px; }
+  /* Tamni prelaz pri dnu okvira, da se beli naslov koraka čita preko fotografije */
+  .js .story-frame::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 75%;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(28, 25, 23, .7), rgba(28, 25, 23, 0));
+    pointer-events: none;
+  }
+  .story-slide { left: 12px; right: 12px; bottom: 12px; width: auto; }
+  .js .story-slide-title {
+    display: block;
+    margin: 0 0 10px;
+    font-family: var(--font-head);
+    font-size: 26px;
+    line-height: 1.1;
+    color: #fff;
+  }
+  .js .story-slide-title span {
+    display: block;
+    margin-bottom: 4px;
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #F5F5F4;
+  }
+  .story-card { padding: 16px; }
   .sc-head { margin-bottom: 12px; padding-bottom: 12px; }
   .sc-title { font-size: 21px; }
   .sc-input { height: 32px; }
@@ -982,12 +1062,14 @@ img.gallery-main { background: #fff; }
   .story-end { margin-top: 40px; }
   .story-end .btn { width: 100%; justify-content: center; }
 
+  .stores-overview { grid-template-columns: 1fr; margin-top: 32px; }
+  .store-sum h3 { font-size: 30px; }
   .store { margin-top: 40px; }
   .store + .store { margin-top: 72px; }
   .store-info { grid-template-columns: 1fr; gap: 24px; margin-top: 32px; }
   .store-map { aspect-ratio: 4 / 3; }
   .scene-frame { grid-template-columns: 1fr; gap: 12px; }
-  .scenes-on .scene { height: 230vh; }
+  .scenes-on .scene { height: 160vh; }
   .scenes-on .scene-caption { bottom: 28px; }
 
   .footer-inner { padding-top: 72px; }

@@ -121,11 +121,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* Video u heru: stoji na prvoj slici za one koji su isključili pokret u sistemu */
+  /* Video u heru: kreće sam, osim za one koji su u sistemu isključili pokret (oni vide samo poster).
+     Dugme zaustavlja i pušta video. */
   const video = document.querySelector(".hero video");
-  if (video && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    video.removeAttribute("autoplay");
-    video.pause();
+  const pauza = document.querySelector(".hero-pause");
+  if (video) {
+    function postaviDugme(pusteno) {
+      if (!pauza) return;
+      pauza.setAttribute("data-stanje", pusteno ? "pusteno" : "zaustavljeno");
+      pauza.setAttribute("aria-label", pusteno ? "Zaustavi video" : "Pusti video");
+    }
+    function postaviVideo(pusti) {
+      if (pusti) {
+        /* Ako pregledač ne dozvoli da video krene, dugme ostaje na "Pusti video" */
+        video.play().catch(function () { postaviDugme(false); });
+      } else {
+        video.pause();
+      }
+      postaviDugme(pusti);
+    }
+    postaviVideo(!window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    if (pauza) {
+      pauza.addEventListener("click", function () { postaviVideo(video.paused); });
+    }
   }
 
   /* Scene radnji: na skrol se slika spolja uvećava ka vratima i prelazi u sliku unutrašnjosti.
@@ -207,10 +225,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* Priča: kako da poručite.
-     Aktivan je poslednji korak čiji je vrh prešao liniju čitanja (sredina ekrana, na mobilnom 72% visine).
-     Uz njega se pale fotografija i kartica sa istim data-korak, a traka na vrhu se puni dok se skroluje kroz korak. */
+     Aktivan je poslednji korak čiji je vrh prešao liniju čitanja: na računaru sredina ekrana,
+     na mobilnom odmah ispod zalepljenog okvira, da se objašnjenje aktivnog koraka uvek vidi.
+     Uz njega se pale fotografija i sloj (naslov i kartica) sa istim data-korak, a traka na vrhu se puni dok se skroluje kroz korak. */
   const prica = document.querySelector("[data-prica]");
   if (prica) {
+    const vizual = prica.querySelector(".story-visual");
     const koraci = Array.prototype.slice.call(prica.querySelectorAll(".story-step"));
     const slojevi = Array.prototype.slice.call(prica.querySelectorAll(".story-visual [data-korak]"));
     const trake = Array.prototype.slice.call(prica.querySelectorAll(".story-bar"));
@@ -231,7 +251,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function proveriPricu() {
       cekaPrica = false;
-      const linija = window.innerHeight * (window.innerWidth <= 768 ? 0.72 : 0.5);
+      const linija = window.innerWidth <= 768
+        ? Math.min(vizual.getBoundingClientRect().bottom + 24, window.innerHeight * 0.85)
+        : window.innerHeight * 0.5;
       let izbor = 0;
       let deoKoraka = 0;
       koraci.forEach(function (k, n) {
