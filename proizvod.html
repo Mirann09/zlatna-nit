@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proizvod | MBA zlatna nit</title>
+<meta name="description" content="Proizvod iz zlatare MBA zlatna nit. Poručite preko forme, šaljemo brzom poštom po celoj Srbiji.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">Šaljemo brzom poštom na adresu po celoj Srbiji</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <!-- LOGO: zameni ovaj div sa <img src="slike/logo.svg" alt="MBA zlatna nit"> -->
+    <a href="index.html" class="logo ph" aria-label="MBA zlatna nit, početna">LOGO</a>
+    <nav class="nav-links" id="nav-links" aria-label="Glavni meni">
+      <a href="kategorija.html#burme">Burme</a>
+      <a href="kategorija.html#verenicko">Vereničko prstenje</a>
+      <a href="kategorija.html#prstenje">Prstenje</a>
+      <a href="kategorija.html#narukvice">Narukvice</a>
+      <a href="kategorija.html#satovi">Satovi</a>
+      <a href="index.html#o-nama">O nama</a>
+      <a href="index.html#radnje">Kontakt</a>
+      <a class="nav-links-phone" href="tel:+381612258641">Pozovite 061 225 8641</a>
+    </nav>
+    <a class="nav-phone" href="tel:+381612258641">061 225 8641</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Otvori meni"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="page-head" style="padding-bottom:32px">
+      <nav class="breadcrumb" aria-label="Putanja"><a href="index.html">Početna</a> / <a id="crumb-kat" href="kategorija.html#sve">Ponuda</a> / <span id="crumb-naziv"></span></nav>
+    </div>
+
+    <div id="proizvod"></div>
+  </div>
+
+  <!-- Kratko ponovljeno: kako se poručuje -->
+  <section class="section section--surface">
+    <div class="container about" style="align-items:start">
+      <h2>Šta se dešava kad pošaljete porudžbinu</h2>
+      <ol class="steps-compact">
+        <li>Javimo vam se telefonom ili mejlom da potvrdimo porudžbinu i veličinu.</li>
+        <li>Pošaljemo vam račun, a vi uplatite na naš račun.</li>
+        <li>Kad uplata stigne, šaljemo vam nakit brzom poštom.</li>
+        <li>Ako vam je lakše, porudžbinu preuzimate u radnji u Apatinu ili Somboru.</li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-card">
+        <!-- FOTOGRAFIJA: zameni div sa <img class="footer-card-media" src="slike/nakit-na-ruci.jpg" alt="..." loading="lazy"> -->
+        <img class="footer-card-media" src="slike/footer-ruka.jpg" alt="Ruka sa zlatnim prstenom i narukvicom" loading="lazy">
+        <div class="footer-card-text">
+          <p>Nakit sa sajta možete da pogledate i probate u radnji u Apatinu ili Somboru.</p>
+          <a class="btn btn--light" href="kategorija.html#sve">Pogledajte ponudu</a>
+        </div>
+      </div>
+
+      <div class="footer-cols">
+        <div>
+          <h3>Ponuda</h3>
+          <ul>
+            <li><a href="kategorija.html#burme">Burme</a></li>
+            <li><a href="kategorija.html#verenicko">Vereničko prstenje</a></li>
+            <li><a href="kategorija.html#prstenje">Prstenje</a></li>
+            <li><a href="kategorija.html#narukvice">Narukvice</a></li>
+            <li><a href="kategorija.html#ogrlice">Ogrlice i lančići</a></li>
+            <li><a href="kategorija.html#mindjuse">Minđuše</a></li>
+            <li><a href="kategorija.html#satovi">Satovi</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Kupovina</h3>
+          <ul>
+            <li><a href="index.html#kako-se-porucuje">Kako se poručuje</a></li>
+            <li><a href="index.html#cesta-pitanja">Česta pitanja</a></li>
+            <li><a href="uslovi-kupovine.html">Uslovi kupovine</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Radnje</h3>
+          <ul>
+            <li><a href="index.html#radnja-apatin">Apatin</a></li>
+            <li><a href="index.html#radnja-sombor">Sombor</a></li>
+            <li><a href="index.html#radnje">Kontakt</a></li>
+            <li><a href="tel:+381612258641">061 225 8641</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- DRUŠTVENE MREŽE: umesto "#" upiši prave linkove -->
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span data-godina>2026</span> MBA zlatna nit</span>
+      <a href="politika-privatnosti.html">Politika privatnosti</a>
+      <a href="uslovi-kupovine.html">Uslovi kupovine</a>
+    </div>
+  </div>
+</footer>
+
+<script src="proizvodi.js"></script>
+<script src="main.js"></script>
+<script>
+/* =========================================================
+   Stranica proizvoda: čita ?id= iz adrese, prikazuje proizvod i formu.
+
+   POVEZIVANJE FORME (Web3Forms):
+   1. Otvori web3forms.com, upiši mejl na koji treba da stižu porudžbine.
+   2. Na mejl stiže "Access Key".
+   3. Taj ključ upiši ispod umesto UPIŠI-WEB3FORMS-KLJUČ.
+   Dok ključ nije upisan, forma radi probno: prikaže poruku o uspehu,
+   ali ništa ne šalje.
+   ========================================================= */
+const WEB3FORMS_KLJUC = "UPIŠI-WEB3FORMS-KLJUČ";
+
+(function () {
+  /* Šifra proizvoda stoji posle # u adresi (proizvod.html#BU-001). Radi i stari oblik ?id=BU-001 */
+  const id = new URLSearchParams(location.search).get("id") || decodeURIComponent(location.hash.slice(1));
+  window.addEventListener("hashchange", function () { location.reload(); });
+  const p = PROIZVODI.find(function (x) { return x.id === id; });
+  const mesto = document.getElementById("proizvod");
+
+  if (!p) {
+    document.getElementById("crumb-naziv").textContent = "Nije pronađeno";
+    mesto.innerHTML = '<div class="empty"><h1>Proizvod nije pronađen</h1>' +
+      '<p>Možda smo ga skinuli sa sajta. Pogledajte <a href="kategorija.html#sve">celu ponudu</a> ili nas pozovite na <a href="' + TELEFON_LINK + '">' + TELEFON + '</a>.</p></div>';
+    return;
+  }
+
+  const kat = KATEGORIJE[p.kategorija];
+  const nazivSifra = p.naziv + " - " + p.sifra;
+  const materijalTekst = p.materijal ? MATERIJALI[p.materijal] : null;
+
+  /* Naslov stranice i meta opis */
+  document.title = nazivSifra + " | MBA zlatna nit";
+  document.querySelector('meta[name="description"]').setAttribute("content",
+    p.naziv + (materijalTekst ? ", " + materijalTekst.toLowerCase() : "") + ". " + formatCena(p.cena) + ". Poručite preko sajta, šaljemo brzom poštom.");
+  document.getElementById("crumb-kat").textContent = kat.naziv;
+  document.getElementById("crumb-kat").href = "kategorija.html#" + p.kategorija;
+  document.getElementById("crumb-naziv").textContent = p.naziv;
+
+  /* ---------- Galerija: prava slika ili placeholder ---------- */
+  const brojSlika = Math.max(p.slike.length, 4);
+  const slike = [];
+  for (let i = 0; i < brojSlika; i++) {
+    slike.push({ src: p.slike[i] || "", alt: p.naziv + ", slika " + (i + 1) });
+  }
+  const thumbs = slike.slice(0, 4).map(function (s, i) {
+    return '<button type="button" data-i="' + i + '" aria-label="Prikaži sliku ' + (i + 1) + '"' + (i === 0 ? ' class="is-active"' : "") + ">" +
+      slikaHtml(s.src, "SLIKA " + (i + 1), "", true) + "</button>";
+  }).join("");
+
+  /* ---------- Specifikacija ---------- */
+  const specs = [];
+  if (materijalTekst) specs.push(["Materijal", materijalTekst]);
+  if (p.karati) specs.push(["Karati", p.karati + " k"]);
+  if (p.materijal === "srebro") specs.push(["Finoća", "925"]);
+  if (p.tezina) specs.push(["Težina", String(p.tezina).replace(".", ",") + " g"]);
+  const specsHtml = specs.map(function (s) { return "<dt>" + s[0] + "</dt><dd>" + esc(s[1]) + "</dd>"; }).join("");
+
+  /* ---------- Polja za veličinu, zavise od kategorije ---------- */
+  const pomocPrsten = '<details class="size-help"><summary>Kako da izmerim veličinu</summary><div>' +
+    '<p>Obmotajte konac ili tanku traku papira oko prsta, na mestu gde nosite prsten. Konac treba da prelazi preko zgloba, ali da ne steže.</p>' +
+    '<p>Obeležite gde se konac spaja i izmerite dužinu lenjirom. Upišite broj u milimetrima, na primer 54.</p>' +
+    '<p>Ako niste sigurni, upišite približnu meru. Proverićemo je kad vas pozovemo.</p></div></details>';
+  const pomocNarukvica = '<details class="size-help"><summary>Kako da izmerim dužinu</summary><div>' +
+    '<p>Obmotajte metar za šivenje ili konac oko ručnog zgloba, tamo gde nosite narukvicu.</p>' +
+    '<p>Na dobijenu meru dodajte 1 do 2 cm da narukvica ne steže. Upišite rezultat u centimetrima.</p></div></details>';
+
+  let velicinaHtml = "";
+  if (kat.velicina === "prsten") {
+    velicinaHtml = polje("velicina", "Veličina prstena", "text", true, "obim prsta u mm, npr. 54") + pomocPrsten;
+  } else if (kat.velicina === "burme") {
+    velicinaHtml = '<div class="field-row">' +
+      polje("velicina_ona", "Veličina za nju", "text", true, "u mm, npr. 52") +
+      polje("velicina_on", "Veličina za njega", "text", true, "u mm, npr. 62") +
+      "</div>" + pomocPrsten;
+  } else if (kat.velicina === "narukvica") {
+    velicinaHtml = polje("duzina", "Dužina narukvice", "text", true, "u cm, npr. 19") + pomocNarukvica;
+  } else if (kat.velicina === "lancic") {
+    velicinaHtml = polje("duzina", "Dužina lančića", "text", false, "u cm, opciono");
+  }
+
+  const gravuraHtml = kat.gravura
+    ? polje("gravura", "Tekst za gravuru", "text", false, "opciono, npr. Ana i Marko 12.06.2027.")
+    : "";
+
+  /* Pravi jedno polje forme. "name" je ujedno naziv koji stiže u mejlu. */
+  function polje(id, labela, tip, obavezno, hint) {
+    return '<div class="field" data-field="' + id + '">' +
+      '<label for="f-' + id + '">' + labela + (hint ? ' <span class="hint">(' + hint + ")</span>" : "") + "</label>" +
+      '<input id="f-' + id + '" name="' + labela + '" type="' + tip + '"' + (obavezno ? " required" : "") +
+      (tip === "email" ? ' autocomplete="email"' : "") + (tip === "tel" ? ' autocomplete="tel" inputmode="tel"' : "") + ">" +
+      '<span class="field-error" id="e-' + id + '" aria-live="polite"></span></div>';
+  }
+
+  /* ---------- Cela stranica ---------- */
+  mesto.innerHTML =
+    '<div class="product">' +
+      '<div class="gallery">' +
+        '<div id="glavna">' + slikaHtml(slike[0].src, nazivSifra, "gallery-main", false) + "</div>" +
+        '<div class="gallery-thumbs">' + thumbs + "</div>" +
+      "</div>" +
+      '<div class="product-info">' +
+        "<h1>" + esc(p.naziv) + "</h1>" +
+        '<p class="product-code">Šifra: ' + esc(p.sifra) + "</p>" +
+        '<p class="product-price">' + formatCena(p.cena) + "</p>" +
+        (specsHtml ? '<dl class="specs">' + specsHtml + "</dl>" : "") +
+        "<p>" + esc(p.opis) + "</p>" +
+
+        '<div class="order" id="porudzbina">' +
+          "<h2>Poručite ovaj proizvod</h2>" +
+          '<p class="lead" style="font-size:16px">Popunite formu. Javićemo vam se da potvrdimo porudžbinu pre nego što bilo šta platite.</p>' +
+
+          /* action je adresa Web3Forms servisa. JS ispod šalje formu bez napuštanja stranice. */
+          '<form id="forma" action="https://api.web3forms.com/submit" method="POST" novalidate>' +
+            '<input type="hidden" name="access_key" value="' + WEB3FORMS_KLJUC + '">' +
+            '<input type="hidden" name="subject" value="Nova porudžbina sa sajta: ' + esc(nazivSifra) + '">' +
+            '<input type="hidden" name="from_name" value="Sajt MBA zlatna nit">' +
+            /* Skriveno polje: vlasnik u mejlu vidi šta je poručeno */
+            '<input type="hidden" name="Proizvod" value="' + esc(nazivSifra + " | " + formatCena(p.cena) + (materijalTekst ? " | " + materijalTekst : "")) + '">' +
+            /* Zaštita od spam robota, ostaviti skriveno */
+            '<input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off">' +
+
+            polje("ime", "Ime i prezime", "text", true, "") +
+            '<div class="field-row">' +
+              polje("telefon", "Telefon", "tel", true, "") +
+              polje("email", "Email", "email", true, "") +
+            "</div>" +
+            polje("ulica", "Ulica i broj", "text", true, "") +
+            '<div class="field-row">' +
+              polje("mesto", "Mesto", "text", true, "") +
+              polje("postanski", "Poštanski broj", "text", true, "") +
+            "</div>" +
+            velicinaHtml +
+            gravuraHtml +
+            '<div class="field" data-field="napomena"><label for="f-napomena">Napomena <span class="hint">(opciono)</span></label>' +
+              '<textarea id="f-napomena" name="Napomena"></textarea></div>' +
+            '<div class="field" data-field="saglasnost"><div class="check">' +
+              '<input id="f-saglasnost" type="checkbox" name="Saglasnost sa politikom privatnosti" value="Da" required>' +
+              '<label for="f-saglasnost">Slažem se sa <a href="politika-privatnosti.html" target="_blank">politikom privatnosti</a></label></div>' +
+              '<span class="field-error" id="e-saglasnost" aria-live="polite"></span></div>' +
+
+            '<button class="btn" type="submit" id="posalji">Pošaljite porudžbinu</button>' +
+            '<p class="form-note">Slanjem forme ne plaćate ništa. Račun šaljemo tek kad potvrdimo porudžbinu.</p>' +
+            '<p class="field-error" id="e-slanje" aria-live="polite"></p>' +
+          "</form>" +
+        "</div>" +
+      "</div>" +
+    "</div>";
+
+  /* ---------- Galerija: klik na malu sliku menja veliku ---------- */
+  document.querySelector(".gallery-thumbs").addEventListener("click", function (e) {
+    const b = e.target.closest("button");
+    if (!b) return;
+    const s = slike[Number(b.dataset.i)];
+    document.getElementById("glavna").innerHTML = slikaHtml(s.src, s.src ? nazivSifra : "SLIKA " + (Number(b.dataset.i) + 1), "gallery-main", false);
+    document.querySelectorAll(".gallery-thumbs button").forEach(function (x) { x.classList.toggle("is-active", x === b); });
+  });
+
+  /* ---------- Provera polja ---------- */
+  const forma = document.getElementById("forma");
+  const pravila = {
+    ime: function (v) { return v.length >= 3 ? "" : "Upišite ime i prezime."; },
+    telefon: function (v) { return /^[0-9+\s\/-]{6,20}$/.test(v) ? "" : "Upišite broj telefona, na primer 061 123 4567."; },
+    email: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? "" : "Upišite ispravnu email adresu."; },
+    ulica: function (v) { return v.length >= 3 ? "" : "Upišite ulicu i broj."; },
+    mesto: function (v) { return v.length >= 2 ? "" : "Upišite mesto."; },
+    postanski: function (v) { return /^\d{5}$/.test(v) ? "" : "Poštanski broj ima 5 cifara, na primer 25260."; },
+    velicina: function (v) { return v ? "" : "Upišite veličinu prstena."; },
+    velicina_ona: function (v) { return v ? "" : "Upišite veličinu za nju."; },
+    velicina_on: function (v) { return v ? "" : "Upišite veličinu za njega."; },
+    duzina: function (v, el) { return v || !el.required ? "" : "Upišite dužinu."; }
+  };
+
+  function proveri(poljeId) {
+    const el = document.getElementById("f-" + poljeId);
+    const greska = document.getElementById("e-" + poljeId);
+    if (!el || !greska) return true;
+    let poruka = "";
+    if (poljeId === "saglasnost") {
+      poruka = el.checked ? "" : "Potrebna je saglasnost da bismo mogli da vam se javimo.";
+    } else if (pravila[poljeId]) {
+      poruka = pravila[poljeId](el.value.trim(), el);
+    }
+    greska.textContent = poruka;
+    el.closest(".field").classList.toggle("has-error", !!poruka);
+    el.setAttribute("aria-invalid", poruka ? "true" : "false");
+    if (poruka) el.setAttribute("aria-describedby", "e-" + poljeId);
+    return !poruka;
+  }
+
+  /* Greška nestaje čim korisnik ispravi polje */
+  forma.addEventListener("input", function (e) {
+    const f = e.target.closest(".field");
+    if (f && f.classList.contains("has-error")) proveri(f.dataset.field);
+  });
+
+  /* ---------- Slanje ---------- */
+  forma.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const polja = Array.from(forma.querySelectorAll(".field")).map(function (f) { return f.dataset.field; });
+    const rezultati = polja.map(proveri);
+    if (rezultati.indexOf(false) !== -1) {
+      const prva = forma.querySelector(".has-error input, .has-error textarea");
+      if (prva) prva.focus();
+      return;
+    }
+
+    const dugme = document.getElementById("posalji");
+    const greskaSlanja = document.getElementById("e-slanje");
+    dugme.disabled = true;
+    dugme.textContent = "Šaljemo...";
+    greskaSlanja.textContent = "";
+
+    /* Probni režim dok ključ nije upisan */
+    if (WEB3FORMS_KLJUC.indexOf("UPIŠI") === 0) {
+      console.warn("Web3Forms ključ nije upisan. Forma radi probno i ništa ne šalje.");
+      setTimeout(uspeh, 400);
+      return;
+    }
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: new FormData(forma)
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data.success) { uspeh(); } else { throw new Error(data.message); }
+      })
+      .catch(function () {
+        dugme.disabled = false;
+        dugme.textContent = "Pošaljite porudžbinu";
+        greskaSlanja.innerHTML = 'Porudžbina nije poslata. Pokušajte ponovo ili nas pozovite na <a href="' + TELEFON_LINK + '">' + TELEFON + "</a>.";
+      });
+  });
+
+  /* Poruka posle uspešnog slanja */
+  function uspeh() {
+    const ime = document.getElementById("f-ime").value.trim().split(" ")[0];
+    document.getElementById("porudzbina").innerHTML =
+      '<div class="success" tabindex="-1" id="uspeh">' +
+        "<h2>Hvala, " + esc(ime) + ". Porudžbina je stigla do nas.</h2>" +
+        "<p>Poručili ste: " + esc(nazivSifra) + ".</p>" +
+        "<p>Šta se dalje dešava:</p>" +
+        "<ol>" +
+          "<li>Javimo vam se telefonom ili mejlom, obično [UPIŠI: isti ili sledeći radni dan].</li>" +
+          "<li>Potvrdimo porudžbinu i veličinu.</li>" +
+          "<li>Pošaljemo vam račun, a vi uplatite.</li>" +
+          "<li>Kad uplata stigne, šaljemo brzom poštom ili vas čekamo u radnji.</li>" +
+        "</ol>" +
+        '<p style="margin-top:20px">Ako imate pitanje, pozovite nas na <a href="' + TELEFON_LINK + '">' + TELEFON + "</a>.</p>" +
+      "</div>";
+    const u = document.getElementById("uspeh");
+    u.focus();
+    u.scrollIntoView({ block: "center" });
+  }
+})();
+</script>
+</body>
+</html>

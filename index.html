@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MBA zlatna nit | Zlatara u Apatinu i Somboru</title>
+<meta name="description" content="Burme, vereničko prstenje, nakit i satovi. Zlatara u Apatinu od 1993. i u Somboru. Cene na sajtu, porudžbina preko forme, slanje brzom poštom.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<!-- Pre crtanja stranice, da se raspored ne pomera:
+     "js" uključuje priču u sekciji Kako da poručite (bez JS koraci stoje jedan ispod drugog).
+     "scenes-on" uključuje scene radnji. Ko je isključio pokret, vidi obe slike jednu do druge. -->
+<script>document.documentElement.classList.add("js"); if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("scenes-on");</script>
+</head>
+<body>
+
+<div class="topbar">Šaljemo brzom poštom na adresu po celoj Srbiji</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <!-- LOGO: zameni ovaj div sa <img src="slike/logo.svg" alt="MBA zlatna nit"> -->
+    <a href="index.html" class="logo ph" aria-label="MBA zlatna nit, početna">LOGO</a>
+    <nav class="nav-links" id="nav-links" aria-label="Glavni meni">
+      <a href="kategorija.html#burme">Burme</a>
+      <a href="kategorija.html#verenicko">Vereničko prstenje</a>
+      <a href="kategorija.html#prstenje">Prstenje</a>
+      <a href="kategorija.html#narukvice">Narukvice</a>
+      <a href="kategorija.html#satovi">Satovi</a>
+      <a href="index.html#o-nama">O nama</a>
+      <a href="index.html#radnje">Kontakt</a>
+      <a class="nav-links-phone" href="tel:+381612258641">Pozovite 061 225 8641</a>
+    </nav>
+    <a class="nav-phone" href="tel:+381612258641">061 225 8641</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Otvori meni"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO SA VIDEOM U POZADINI
+       Video: slike/hero-video.mp4 (ovo je PRIVREMENI video, zameni pravim snimkom burmi na postolju).
+       poster = slika koja se vidi dok se video učitava i kad je pokret isključen.
+       Video je bez zvuka (muted) i vrti se u krug (loop). -->
+  <section class="hero">
+    <video class="hero-media" autoplay muted loop playsinline preload="auto" poster="slike/hero-burme.jpg" aria-hidden="true">
+      <source src="slike/hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>Burme i nakit iz Apatina, od 1993.</h1>
+      <p class="hero-lead">Cene su na sajtu. Poručite preko forme, a mi šaljemo brzom poštom ili vas čekamo u radnji u Apatinu ili Somboru.</p>
+      <a class="btn" href="kategorija.html#burme">Pogledajte burme</a>
+    </div>
+  </section>
+
+  <!-- KATEGORIJE: prvi red 3 velike, drugi red 4 manje kartice -->
+  <section class="section" id="kategorije">
+    <div class="container">
+      <h2>Burme, prstenje, nakit i satovi</h2>
+      <div class="cats-row cats-row--3" style="margin-top:40px">
+        <a class="cat-card" href="kategorija.html#burme">
+          <img class="cat-media" src="slike/kat-burme.jpg" alt="Ruke para sa zlatnim burmama" loading="lazy">
+          <div class="cat-text">
+            <p class="cat-title">Burme</p>
+            <p class="cat-desc">Žuto, belo i roze zlato. Gravura na unutrašnjoj strani.</p>
+            <span class="link-caps cat-link">Pogledaj →</span>
+          </div>
+        </a>
+        <a class="cat-card" href="kategorija.html#verenicko">
+          <img class="cat-media" src="slike/kat-verenicko.jpg" alt="Ženska ruka sa zlatnim vereničkim prstenom" loading="lazy">
+          <div class="cat-text">
+            <p class="cat-title">Vereničko prstenje</p>
+            <p class="cat-desc">Prstenje za prosidbu, od zlata i srebra.</p>
+            <span class="link-caps cat-link">Pogledaj →</span>
+          </div>
+        </a>
+        <a class="cat-card" href="kategorija.html#prstenje">
+          <img class="cat-media" src="slike/kat-prstenje.jpg" alt="Ženska ruka sa tri tanka zlatna prstena" loading="lazy">
+          <div class="cat-text">
+            <p class="cat-title">Prstenje</p>
+            <p class="cat-desc">Za svaki dan i za poklon.</p>
+            <span class="link-caps cat-link">Pogledaj →</span>
+          </div>
+        </a>
+      </div>
+      <div class="cats-row cats-row--4">
+        <a class="cat-card" href="kategorija.html#narukvice">
+          <img class="cat-media" src="slike/kat-narukvice.jpg" alt="Zlatna pancer narukvica na bež tkanini" loading="lazy">
+          <div class="cat-text">
+            <p class="cat-title">Narukvice</p>
+            <p class="cat-desc">Zlatne i srebrne.</p>
+            <span class="link-caps cat-link">Pogledaj →</span>
+          </div>
+        </a>
+        <a class="cat-card" href="kategorija.html#ogrlice">
+          <div class="cat-media ph" role="img" aria-label="Ogrlice i lančići">FOTOGRAFIJA LANČIĆA</div>
+          <div class="cat-text">
+            <p class="cat-title">Ogrlice i lančići</p>
+            <p class="cat-desc">Sa privezkom i bez.</p>
+            <span class="link-caps cat-link">Pogledaj →</span>
+          </div>
+        </a>
+        <a class="cat-card" href="kategorija.html#mindjuse">
+          <div class="cat-media ph" role="img" aria-label="Minđuše">FOTOGRAFIJA MINĐUŠA</div>
+          <div class="cat-text">
+            <p class="cat-title">Minđuše</p>
+            <p class="cat-desc">Male i viseće.</p>
+            <span class="link-caps cat-link">Pogledaj →</span>
+          </div>
+        </a>
+        <a class="cat-card" href="kategorija.html#satovi">
+          <div class="cat-media ph" role="img" aria-label="Satovi">FOTOGRAFIJA SATA</div>
+          <div class="cat-text">
+            <p class="cat-title">Satovi</p>
+            <p class="cat-desc">Muški i ženski.</p>
+            <span class="link-caps cat-link">Pogledaj →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- O NAMA -->
+  <section class="section section--line" id="o-nama">
+    <div class="container">
+    <div class="about">
+      <img class="about-media" src="slike/radnja-unutra.webp" width="1122" height="1402" alt="Vitrine sa prstenjem i ogrlicama u radnji MBA zlatna nit" loading="lazy">
+      <div>
+        <h2>Zlatara u Apatinu od 1993. godine</h2>
+        <p>Radnju u Apatinu otvorili smo 1993. godine, u Ulici srpskih vladara 10. Radnju u Somboru otvorili smo [UPIŠI GODINU].</p>
+        <p>U obe radnje možete da probate nakit i preuzmete porudžbinu sa sajta.</p>
+        <ul class="services">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Pravimo nakit po meri</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Graviramo burme i prstenje</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Popravljamo nakit</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Otkupljujemo zlato</li>
+        </ul>
+      </div>
+    </div>
+    <div class="about-photos">
+      <img src="slike/radnja-izlog.webp" width="1448" height="1086" alt="Izlog radnje sa ogrlicama i prstenjem" loading="lazy">
+      <img src="slike/radnja-pult.webp" width="1448" height="1086" alt="Pult sa prstenjem i police sa satovima u radnji" loading="lazy">
+    </div>
+    </div>
+  </section>
+
+  <!-- IZDVOJENI PROIZVODI: biraju se u proizvodi.js sa izdvojen: true -->
+  <section class="section section--line">
+    <div class="container">
+      <div class="section-head">
+        <h2>Izdvojeno iz ponude</h2>
+        <a class="link-caps" href="kategorija.html#sve">Pogledajte sve →</a>
+      </div>
+      <div class="products" id="izdvojeni"></div>
+    </div>
+  </section>
+
+  <!-- KAKO SE PORUČUJE: priča na skrol.
+       Levo su koraci, desno zalepljen okvir sa fotografijom i karticom koja pokazuje taj korak.
+       Aktivni korak bira main.js (deo "Priča: kako da poručite"). Okvir je samo ilustracija (aria-hidden),
+       sav tekst je u koracima. Primer kroz celu priču su burme za Anu i Marka, kao primer gravure u formi. -->
+  <section class="section section--surface" id="kako-se-porucuje">
+    <div class="container">
+      <div class="story-head">
+        <h2>Kako da poručite preko sajta</h2>
+        <p class="lead">Na sajtu nema korpe ni plaćanja karticom. Pošaljete nam formu, a mi vas pozovemo i dogovorimo ostalo.</p>
+      </div>
+
+      <div class="story" data-prica>
+        <ol class="story-steps">
+          <li class="story-step is-active" aria-current="step">
+            <span class="story-num">Korak 1</span>
+            <h3>Izaberite nakit i popunite formu</h3>
+            <p>Forma je na stranici svakog proizvoda. Upišite ime, telefon i adresu. Za prsten i narukvicu upišite i meru.</p>
+          </li>
+          <li class="story-step">
+            <span class="story-num">Korak 2</span>
+            <h3>Javimo vam se</h3>
+            <p>Pozovemo vas ili pišemo mejlom. Proverimo veličinu i potvrdimo porudžbinu.</p>
+          </li>
+          <li class="story-step">
+            <span class="story-num">Korak 3</span>
+            <h3>Uplatite na naš račun</h3>
+            <p>Pošaljemo vam iznos i broj računa. Nakit spremamo za slanje tek kad uplata stigne.</p>
+          </li>
+          <li class="story-step">
+            <span class="story-num">Korak 4</span>
+            <h3>Šaljemo nakit</h3>
+            <p>Pakujemo ga i šaljemo brzom poštom na vašu adresu. Ako vam je lakše, preuzmite ga lično, u radnji u Apatinu ili Somboru.</p>
+          </li>
+        </ol>
+
+        <div class="story-visual" aria-hidden="true">
+          <div class="story-frame">
+            <img class="story-bg is-active" data-korak="0" src="slike/hero-burme.jpg" alt="" loading="lazy">
+            <img class="story-bg" data-korak="1" src="slike/apatin-unutra.webp" alt="" loading="lazy">
+            <img class="story-bg" data-korak="2" src="slike/kat-narukvice.jpg" alt="" loading="lazy">
+            <img class="story-bg" data-korak="3" src="slike/kat-burme.jpg" alt="" loading="lazy">
+
+            <!-- Traka kao kod priča na telefonu: puni se dok se skroluje kroz korake -->
+            <div class="story-bars">
+              <span class="story-bar"><i></i></span><span class="story-bar"><i></i></span><span class="story-bar"><i></i></span><span class="story-bar"><i></i></span>
+            </div>
+
+            <!-- 1. Forma se popunjava -->
+            <div class="story-card is-active" data-korak="0">
+              <div class="sc-head sc-head--opt">
+                <img class="sc-thumb" src="slike/hero-burme.jpg" alt="" loading="lazy">
+                <div><p class="sc-label">Izabrali ste</p><p class="sc-title">Burme, žuto zlato</p></div>
+              </div>
+              <div class="sc-field"><span class="sc-field-label">Ime i prezime</span><span class="sc-input"><span class="sc-typed" style="--d:.3s;--n:12">Ana Marković</span></span></div>
+              <div class="sc-row">
+                <div class="sc-field"><span class="sc-field-label">Za nju</span><span class="sc-input"><span class="sc-typed" style="--d:1s;--n:5">52 mm</span></span></div>
+                <div class="sc-field"><span class="sc-field-label">Za njega</span><span class="sc-input"><span class="sc-typed" style="--d:1.4s;--n:5">62 mm</span></span></div>
+              </div>
+              <div class="sc-field sc-field--opt"><span class="sc-field-label">Gravura</span><span class="sc-input"><span class="sc-typed" style="--d:1.8s;--n:23">Ana i Marko 12.06.2027.</span></span></div>
+              <span class="sc-btn">Pošaljite porudžbinu</span>
+            </div>
+
+            <!-- 2. Poziv iz radnje -->
+            <div class="story-card" data-korak="1">
+              <div class="sc-head">
+                <span class="sc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3.5h3l1.5 4-2 1.5a10.5 10.5 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2C10.6 18.5 5 12.9 5 5.5a2 2 0 0 1 2-2z"/></svg></span>
+                <div><p class="sc-label">Poziv iz radnje</p><p class="sc-title">MBA zlatna nit</p><p class="sc-sub">061 225 8641</p></div>
+              </div>
+              <ul class="sc-checks">
+                <li style="--d:.5s"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Veličina 52 i 62 mm</li>
+                <li style="--d:.9s"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Tekst za gravuru</li>
+                <li style="--d:1.3s"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Adresa za slanje</li>
+              </ul>
+              <p class="sc-status" style="--d:1.8s">Potvrdili smo porudžbinu</p>
+            </div>
+
+            <!-- 3. Podaci za uplatu. Iznos i račun su sive crte, jer zavise od porudžbine. -->
+            <div class="story-card" data-korak="2">
+              <p class="sc-label">Podaci za uplatu</p>
+              <dl class="sc-pay">
+                <div style="--d:.3s"><dt>Primalac</dt><dd>MBA zlatna nit</dd></div>
+                <div style="--d:.6s"><dt>Svrha</dt><dd>Porudžbina sa sajta</dd></div>
+                <div style="--d:.9s"><dt>Iznos</dt><dd><span class="sc-skeleton" style="width:88px"></span></dd></div>
+                <div style="--d:1.2s"><dt>Račun</dt><dd><span class="sc-skeleton" style="width:150px"></span></dd></div>
+              </dl>
+              <p class="sc-status" style="--d:1.9s"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Uplata je stigla</p>
+            </div>
+
+            <!-- 4. Paket na putu -->
+            <div class="story-card" data-korak="3">
+              <div class="sc-head">
+                <span class="sc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7.5l8-3.5 8 3.5v9l-8 3.5-8-3.5z"/><path d="M4 7.5l8 3.5 8-3.5M12 11v9"/></svg></span>
+                <div><p class="sc-label">Brza pošta</p><p class="sc-title">Paket je na putu</p></div>
+              </div>
+              <ol class="sc-track">
+                <li style="--d:.3s">Pakujemo</li>
+                <li style="--d:.9s">Šaljemo</li>
+                <li style="--d:1.5s">Stiže kod vas</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-end">
+        <a class="btn" href="kategorija.html#sve">Pogledajte ponudu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ČESTA PITANJA -->
+  <section class="section" id="cesta-pitanja">
+    <div class="container faq">
+      <div>
+        <h2>Pitanja pre kupovine</h2>
+        <p>Ako ne nađete odgovor, pozovite nas na <a href="tel:+381612258641">061 225 8641</a>.</p>
+      </div>
+      <div class="faq-list">
+          <details>
+            <summary>Kako da znam koju veličinu prstena nosim?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="faq-answer"><p>Obmotajte konac oko prsta, na mestu gde nosite prsten. Obeležite gde se spaja i izmerite ga lenjirom u milimetrima. Taj broj upišite u formu.</p><p>Ako niste sigurni, upišite približnu meru. Proverićemo je zajedno kad vas pozovemo, pre nego što pošaljemo prsten.</p></div>
+          </details>
+          <details>
+            <summary>Da li je zlato žigosano i dobijam li garanciju?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="faq-answer"><p>[UPIŠI ODGOVOR: da li je nakit žigosan, koliko traje garancija i šta pokriva]</p></div>
+          </details>
+          <details>
+            <summary>Šta ako veličina ne odgovara, može li zamena?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="faq-answer"><p>[UPIŠI ODGOVOR: da li je moguća zamena ili prepravka veličine, u kom roku i ko plaća slanje]</p></div>
+          </details>
+          <details>
+            <summary>Koliko traje slanje i koliko košta?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="faq-answer"><p>Šaljemo brzom poštom [UPIŠI KURIRSKU SLUŽBU]. Paket stiže za [UPIŠI BROJ DANA], a slanje košta [UPIŠI CENU].</p><p>Porudžbinu možete i da preuzmete lično, u radnji u Apatinu ili Somboru.</p></div>
+          </details>
+          <details>
+            <summary>Može li gravura na burmama?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="faq-answer"><p>Može. Tekst za gravuru upišite u formu kad poručujete, na primer imena i datum venčanja.</p><p>[UPIŠI: cena gravure, koliko znakova staje i koliko dana duže traje izrada]</p></div>
+          </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- RADNJE: za svaku radnju scena i ispod nje podaci i mapa.
+       Scena: na skrol se slika spolja uvećava ka vratima i prelazi u sliku unutrašnjosti (main.js, deo "Scene radnji").
+       data-vrata="x y" je tačka ka kojoj se zumira, u procentima slike (sredina vrata).
+       Ko je u sistemu isključio pokret, ili nema JS, vidi obe slike jednu do druge.
+       Mape su Google embed bez API ključa. Za Sombor zameni "Sombor" u src i href tačnom adresom. -->
+  <section class="section section--line" id="radnje">
+    <div class="container">
+      <h2>Dve radnje, u Apatinu i Somboru</h2>
+      <p class="lead">Nakit sa sajta možete da probate u obe radnje. Tu možete i da preuzmete porudžbinu, ako ne želite da je šaljemo poštom.</p>
+    </div>
+
+    <article class="store" id="radnja-apatin">
+      <div class="scene" data-scena data-vrata="49 56">
+        <div class="scene-stage">
+          <div class="scene-frame">
+            <img class="scene-out" src="slike/apatin-spolja.webp" width="1672" height="941" alt="Izlog i ulaz radnje u Apatinu" loading="lazy">
+            <img class="scene-in" src="slike/apatin-unutra.webp" width="1672" height="941" alt="Unutrašnjost radnje u Apatinu, pult sa prstenjem i vitrine sa satovima" loading="lazy">
+          </div>
+          <div class="scene-caption">
+            <h3>Apatin</h3>
+            <p>Srpskih vladara 10</p>
+          </div>
+        </div>
+      </div>
+      <div class="container store-info">
+        <div>
+          <dl>
+            <dt>Adresa</dt><dd>Srpskih vladara 10, 25260 Apatin</dd>
+            <dt>Telefon</dt><dd><a href="tel:+381612258641">061 225 8641</a></dd>
+            <dt>Radno vreme</dt><dd>9 - 16 h, [UPIŠI DANE, npr. ponedeljak - subota]</dd>
+          </dl>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Srpskih%20vladara%2010%2C%20Apatin" target="_blank" rel="noopener">Otvorite u mapama</a>
+        </div>
+        <iframe class="store-map" src="https://maps.google.com/maps?q=Srpskih%20vladara%2010%2C%20Apatin&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa: radnja u Apatinu, Srpskih vladara 10"></iframe>
+      </div>
+    </article>
+
+    <article class="store" id="radnja-sombor">
+      <div class="scene" data-scena data-vrata="49 54">
+        <div class="scene-stage">
+          <div class="scene-frame">
+            <img class="scene-out" src="slike/sombor-spolja.webp" width="1672" height="941" alt="Izlog i ulaz radnje u Somboru" loading="lazy">
+            <img class="scene-in" src="slike/sombor-unutra.webp" width="1672" height="941" alt="Unutrašnjost radnje u Somboru, pult i vitrine sa nakitom" loading="lazy">
+          </div>
+          <div class="scene-caption">
+            <h3>Sombor</h3>
+            <p>[UPIŠI ADRESU]</p>
+          </div>
+        </div>
+      </div>
+      <div class="container store-info">
+        <div>
+          <dl>
+            <dt>Adresa</dt><dd>[UPIŠI ADRESU], Sombor</dd>
+            <dt>Telefon</dt><dd>[UPIŠI TELEFON]</dd>
+            <dt>Radno vreme</dt><dd>[UPIŠI RADNO VREME]</dd>
+          </dl>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Sombor" target="_blank" rel="noopener">Otvorite u mapama</a>
+        </div>
+        <iframe class="store-map" src="https://maps.google.com/maps?q=Sombor&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa: radnja u Somboru"></iframe>
+      </div>
+    </article>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-card">
+        <!-- FOTOGRAFIJA: zameni div sa <img class="footer-card-media" src="slike/nakit-na-ruci.jpg" alt="..." loading="lazy"> -->
+        <img class="footer-card-media" src="slike/footer-ruka.jpg" alt="Ruka sa zlatnim prstenom i narukvicom" loading="lazy">
+        <div class="footer-card-text">
+          <p>Nakit sa sajta možete da pogledate i probate u radnji u Apatinu ili Somboru.</p>
+          <a class="btn btn--light" href="kategorija.html#sve">Pogledajte ponudu</a>
+        </div>
+      </div>
+
+      <div class="footer-cols">
+        <div>
+          <h3>Ponuda</h3>
+          <ul>
+            <li><a href="kategorija.html#burme">Burme</a></li>
+            <li><a href="kategorija.html#verenicko">Vereničko prstenje</a></li>
+            <li><a href="kategorija.html#prstenje">Prstenje</a></li>
+            <li><a href="kategorija.html#narukvice">Narukvice</a></li>
+            <li><a href="kategorija.html#ogrlice">Ogrlice i lančići</a></li>
+            <li><a href="kategorija.html#mindjuse">Minđuše</a></li>
+            <li><a href="kategorija.html#satovi">Satovi</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Kupovina</h3>
+          <ul>
+            <li><a href="index.html#kako-se-porucuje">Kako se poručuje</a></li>
+            <li><a href="index.html#cesta-pitanja">Česta pitanja</a></li>
+            <li><a href="uslovi-kupovine.html">Uslovi kupovine</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Radnje</h3>
+          <ul>
+            <li><a href="index.html#radnja-apatin">Apatin</a></li>
+            <li><a href="index.html#radnja-sombor">Sombor</a></li>
+            <li><a href="index.html#radnje">Kontakt</a></li>
+            <li><a href="tel:+381612258641">061 225 8641</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- DRUŠTVENE MREŽE: umesto "#" upiši prave linkove -->
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span data-godina>2026</span> MBA zlatna nit</span>
+      <a href="politika-privatnosti.html">Politika privatnosti</a>
+      <a href="uslovi-kupovine.html">Uslovi kupovine</a>
+    </div>
+  </div>
+</footer>
+
+<script src="proizvodi.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
